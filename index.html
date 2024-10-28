@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Mental - Interbloqueos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="particles.min.js"></script>
+</head>
+
+<body>
+    <div class="mindmap">
+
+        <!--LEFT-->
+        <ol class="children children_leftbranch">
+            <li class="children_item">
+                <div class="node">
+                    <div class="node_text">Recursos</div>
+                    <input type="text" class="node_input">
+                </div>
+                <ol class="children">
+                    <li class="children_item">
+                        <div class="node">
+                            <div class="node_text">Recursos<br>Apropiativos</div>
+                            <input type="text" class="node_input">
+                        </div>
+                        <ol class="children">
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">Es uno que<br>se puede quitar al<br>proceso que lo
+                                        posee<br>sin efectos<br>dañinos</div>
+                                    <input type="text" class="node_input">
+                                </div>
+                            </li>
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">La memoria es un<br>ejemplo de un recurso<br>apropiativo
+                                    </div>
+                                    <input type="text" class="node_input">
+                                </div>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="children_item">
+                        <div class="node">
+                            <div class="node_text">Recursos No<br>Apropiativos</div>
+                            <input type="text" class="node_input">
+                        </div>
+                        <ol class="children">
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">Es uno que no<br>se puede quitar a su<br>propietario actual
+                                        sin<br>hacer que el cómputo<br>falle</div>
+                                    <input type="text" class="node_input">
+                                </div>
+                            </li>
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">Los grabadores de<br>CD no son apropiativos<br>en un
+                                        momento<br>arbitrario</div>
+                                    <input type="text" class="node_input">
+                                </div>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="children_item">
+                        <div class="node">
+                            <div class="node_text">La secuencia de<br>eventos requerida<br>para utilizar un<br>recurso
+                                se proporciona<br>a continuación</div>
+                            <input type="text" class="node_input">
+                        </div>
+                        <ol class="children">
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">Solicitar el<br>recurso</div>
+                                    <input type="text" class="node_input">
+                                </div>
+                            </li>
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">Utilizar el<br>recurso</div>
+                                    <input type="text" class="node_input">
+                                </div>
+                            </li>
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">Liberar el<br>recurso</div>
+                                    <input type="text" class="node_input">
+                                </div>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li class="children_item">
+                <div class="node">
+                    <div class="node_text">El algoritmo de<br>la avestruz</div>
+                    <input type="text" class="node_input">
+                </div>
+                <ol class="children">
+                    <li class="children_item">
+                        <div class="node">
+                            <div class="node_text">El método más simple<br>:es el algoritmo de la avestruz<br>meta su
+                                cabeza en la arena<br>y pretenda que no hay<br>ningún problema</div>
+                            <input type="text" class="node_input">
+                        </div>
+                    </li>
+                </ol>
+            </li>
+            <li class="children_item">
+                <div class="node">
+                    <div class="node_text">Como evitar<br>interbloqueos</div>
+                    <input type="text" class="node_input">
+                </div>
+                <ol class="children">
+                    <li class="children_item">
+                        <div class="node">
+                            <div class="node_text">Estados seguros<br>e inseguros</div>
+                            <input type="text" class="node_input">
+                        </div>
+                        <ol class="children">
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">Se dice que un estado<br>es seguro si hay cierto orden de<br>
+                                        programación en el que se puede ejecutar<br>cada proceso hasta completarse,
+                                        incluso<br>
+                                        aunque todos ellos solicitaran de manera<br>repentina su número
+                                        máximo de<br>.recursos de inmediato</div>
+                                    <input type="text" class="node_input">
+                                </div>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="children_item">
+                        <div class="node">
+                            <div class="node_text">El algoritmo del<br>banquero para un<br>solo recurso</div>
+                            <input type="text" class="node_input">
+                        </div>
+                        <ol class="children">
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">Se modela de la forma<br>en que un banquero de una
+                                        <br>pequeña
+                                        ciudad podría tratar con un<br>grupo de clientes a los que ha otorgado
+                                        líneas<br>de
+                                        crédito. Lo que hace el algoritmo es<br>comprobar si al otorgar la
+                                        petición se<br>
+                                        produce un
+                                        estado inseguro. Si es así, la<br>petición se rechaza. Si al otorgar<br>la
+                                        petición se
+                                        produce un estado<br>
+                                        .seguro, se lleva a cabo
+                                    </div>
+                                    <input type="text" class="node_input">
+                                </div>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="children_item">
+                        <div class="node">
+                            <div class="node_text">El algoritmo del<br>banquero para varios<br>recursos</div>
+                            <input type="text" class="node_input">
+                        </div>
+                        <ol class="children">
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">,Buscar una fila R<br>cuyas necesidades de recursos no<br>
+                                        satisfechas sean menores o iguales<br>que
+                                        A. Si no existe dicha fila, el<br>sistema entrará en interbloqueo en
+                                        un<br>momento dado, debido a que ningún<br>proceso se podrá ejecutar<br>.hasta
+                                        completarse
+                                    </div>
+                                    <input type="text" class="node_input">
+                                </div>
+                            </li>
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">Suponer que el<br>proceso seleccionado de la fila<br>solicita
+                                        todos
+                                        los recursos que necesita y<br>termina. Marcar ese proceso como<br>terminado y
+                                        agregar
+                                        todos sus<br>recursos al vector A
+                                    </div>
+                                    <input type="text" class="node_input">
+                                </div>
+                            </li>
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">Repetir los pasos 1 y<br>2 hasta que todos los procesos<br>se
+                                        marquen como terminados
+                                        o hasta<br>que no haya ningún proceso cuyas<br>necesidades de
+                                        recursos se<br>.puedan satisfacer
+                                    </div>
+                                    <input type="text" class="node_input">
+                                </div>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+
+        <!--CENTER-->
+        <div class="node node_root">
+            <div class="node_text">Interbloqueos</div>
+            <input type="file" class="node_input">
+        </div>
+
+        <!--RIGHT-->
+        <ol class="children children_rightbranch">
+            <li class="children_item">
+                <div class="node">
+                    <div class="node_text">Introduccion a<br>los interbloqueos</div>
+                    <input type="text" class="node_input">
+                </div>
+                <ol class="children">
+                    <li class="children_item">
+                        <div class="node">
+                            <div class="node_text">Un conjunto de<br>procesos se encuentra<br>en un interbloqueo<br>si
+                                cada proceso en el<br>conjunto está esperando<br>un evento que sólo puede<br>ser
+                                ocasionado por otro<br>proceso en el<br>conjunto.</div>
+                            <input type="text" class="node_input">
+                        </div>
+                    </li>
+                    <li class="children_item">
+                        <div class="node">
+                            <div class="node_text">Condiciones para<br>los interbloqueos<br>de recursos</div>
+                            <input type="text" class="node_input">
+                        </div>
+                        <ol class="children">
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">1. Condición de<br>exclusión mutua</div>
+                                    <input type="text" class="node_input">
+                                </div>
+                                <ol class="children">
+                                    <li class="children_item">
+                                        <div class="node">
+                                            <div class="node_text">Cada recurso se<br>
+                                                asigna en un momento dado<br>a sólo un proceso, o está<br>disponible.
+                                            </div>
+                                            <input type="text" class="node_input">
+                                        </div>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">2. Condición de<br>contención y espera</div>
+                                    <input type="text" class="node_input">
+                                </div>
+                                <ol class="children">
+                                    <li class="children_item">
+                                        <div class="node">
+                                            <div class="node_text">Los procesos que<br>actualmente contienen
+                                                recursos<br>
+                                                que se les otorgaron antes<br>pueden solicitar nuevos<br>recursos.
+                                            </div>
+                                            <input type="text" class="node_input">
+                                        </div>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">3. Condición<br>no apropiativa</div>
+                                    <input type="text" class="node_input">
+                                </div>
+                                <ol class="children">
+                                    <li class="children_item">
+                                        <div class="node">
+                                            <div class="node_text">Los recursos otorgados<br>previamente no se pueden
+                                                <br>quitar a un proceso por la fuerza.<br>Deben ser liberados de
+                                                manera<br>explícita por el proceso<br>que los contiene.
+                                            </div>
+                                            <input type="text" class="node_input">
+                                        </div>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">4. Condición de<br>espera circular</div>
+                                    <input type="text" class="node_input">
+                                </div>
+                                <ol class="children">
+                                    <li class="children_item">
+                                        <div class="node">
+                                            <div class="node_text">Debe haber una cadena<br>circular de dos o más
+                                                procesos,<br>cada uno de los cuales espera<br>un recurso contenido por
+                                                el<br>siguiente miembro de<br>la cadena.
+                                            </div>
+                                            <input type="text" class="node_input">
+                                        </div>
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="children_item">
+                        <div class="node">
+                            <div class="node_text">Se utilizan cuatro<br>estrategias para lidiar con<br>los
+                                interbloqueos.</div>
+                            <input type="text" class="node_input">
+                        </div>
+                        <ol class="children">
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">1. Sólo ignorar<br>el problema</div>
+                                    <input type="text" class="node_input">
+                                </div>
+                                <ol class="children">
+                                    <li class="children_item">
+                                        <div class="node">
+                                            <div class="node_text">Tal vez si usted<br>lo ignora, él lo ignorará<br>a
+                                                usted.</div>
+                                            <input type="text" class="node_input">
+                                        </div>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">2. Detección y<br>recuperación</div>
+                                    <input type="text" class="node_input">
+                                </div>
+                                <ol class="children">
+                                    <li class="children_item">
+                                        <div class="node">
+                                            <div class="node_text">Dejar que ocurran<br>los interbloqueos,
+                                                detectarlos<br>y tomar acción.</div>
+                                            <input type="text" class="node_input">
+                                        </div>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">3. Evitarlos en forma<br>dinámica mediante la<br>asignación
+                                        cuidadosa de<br>los recursos.</div>
+                                    <input type="text" class="node_input">
+                                </div>
+                            </li>
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">4. Prevención, al evitar<br>estructuralmente una de las
+                                        cuatro<br>condiciones requeridas.</div>
+                                    <input type="text" class="node_input">
+                                </div>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li class="children_item">
+                <div class="node">
+                    <div class="node_text">Detección y<br>recuperación de un<br>interbloqueo</div>
+                    <input type="text" class="node_input">
+                </div>
+                <ol class="children">
+                    <li class="children_item">
+                        <div class="node">
+                            <div class="node_text">Detección de<br>interbloqueos con un<br>recurso de cada<br>tipo</div>
+                            <input type="text" class="node_input">
+                        </div>
+                        <ol class="children">
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">Podemos construir<br>un gráfico de recursos. Si<br>este
+                                        gráfico
+                                        contiene uno<br>o más ciclos, existe un<br>interbloqueo. Cualquier
+                                        proceso<br>que forme
+                                        parte de un ciclo<br>está en interbloqueo. Si no<br>existen ciclos, el
+                                        sistema<br>no está
+                                        en<br>interbloqueo.</div>
+                                    <input type="text" class="node_input">
+                                </div>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="children_item">
+                        <div class="node">
+                            <div class="node_text">Detección del<br>interbloqueo con varios<br>recursos de cada tipo
+                            </div>
+                            <input type="text" class="node_input">
+                        </div>
+                        <ol class="children">
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">1. Buscar un proceso<br>desmarcado, Pi, para el que<br>la
+                                        i-ésima fila de R sea<br>menor o igual que A.</div>
+                                    <input type="text" class="node_input">
+                                </div>
+                            </li>
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">2. Si se encuentra<br>dicho proceso, agregar la<br>i-ésima
+                                        fila de C a A, marcar<br>el proceso y regresar al<br>paso 1.</div>
+                                    <input type="text" class="node_input">
+                                </div>
+                            </li>
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">3. Si no existe<br>dicho proceso, el algoritmo<br>termina.
+                                    </div>
+                                    <input type="text" class="node_input">
+                                </div>
+                            </li>
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">Cuando el algoritmo<br>termina, todos los
+                                        procesos<br>desmarcados (si los hay) están<br>en interbloqueo.</div>
+                                    <input type="text" class="node_input">
+                                </div>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="children_item">
+                        <div class="node">
+                            <div class="node_text">Recuperación de<br>un interbloqueo</div>
+                            <input type="text" class="node_input">
+                        </div>
+                        <ol class="children">
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">Recuperación por<br>medio de apropiación</div>
+                                    <input type="text" class="node_input">
+                                </div>
+                                <ol class="children">
+                                    <li class="children_item">
+                                        <div class="node">
+                                            <div class="node_text">En algunos casos<br>puede ser posible quitar<br>
+                                                temporalmente un recurso a su<br>propietario actual y otorgarlo a
+                                                otro<br>proceso. En muchos casos se puede<br>requerir intervención
+                                                manual, en<br>
+                                                especial en los sistemas operativos<br>de procesamiento por lotes<br>que
+                                                se
+                                                ejecutan<br>en mainframes.</div>
+                                            <input type="text" class="node_input">
+                                        </div>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">Recuperación<br>a través del<br>retroceso</div>
+                                    <input type="text" class="node_input">
+                                </div>
+                                <ol class="children">
+                                    <li class="children_item">
+                                        <div class="node">
+                                            <div class="node_text">Para realizar la<br>recuperación, un proceso<br>
+                                                que posee
+                                                un recurso necesario<br>se revierte a un
+                                                punto en el tiempo<br>antes de que haya adquirido ese<br>recurso,
+                                                para lo cual
+                                                se inicia uno<br>de sus puntos
+                                                de comprobación<br>anteriores. Se pierde todo el<br>trabajo realizado
+                                                desde<br>el
+                                                punto de<br>comprobación.</div>
+                                            <input type="text" class="node_input">
+                                        </div>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="children_item">
+                                <div class="node">
+                                    <div class="node_text">Recuperación<br>a través de la eliminación<br>de procesos
+                                    </div>
+                                    <input type="text" class="node_input">
+                                </div>
+                                <ol class="children">
+                                    <li class="children_item">
+                                        <div class="node">
+                                            <div class="node_text">La forma más cruda<br>y simple de romper
+                                                un<br>interbloqueo
+                                                es eliminar uno o más<br>procesos. Una posibilidad es eliminar<br>a uno
+                                                de
+                                                los
+                                                procesos en el ciclo.<br>Con un poco de suerte, los demás
+                                                procesos<br>podrán
+                                                continuar. Si esto no ayuda,<br>se puede repetir hasta que se<br>rompa
+                                                el ciclo.</div>
+                                            <input type="text" class="node_input">
+                                        </div>
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+
+    <div class="toolkit">
+
+        <div class="collapse_btn">&#10224;</div>
+        <label for="primary-color-picker">Primary color: </label>
+        <input id="primary-color-picker" type="color" value="#8ca0be"
+            onchange="body.style.setProperty(`--primary-color`,this.value);"><br>
+        <label for="secondary-color-picker">Secondary color: </label>
+        <input id="secondary-color-picker" type="color" value="#7d7dbe"
+            onchange="body.style.setProperty(`--secondary-color`,this.value);"><br>
+        <label for="text-color-picker">Text color: </label>
+        <input id="text-color-picker" type="color" value="#e6e6e6"
+            onchange="body.style.setProperty(`--text-color`,this.value);"><br>
+        <label for="line-color-picker">Line color: </label>
+        <input id="line-color-picker" type="color" value="#ffbea0"
+            onchange="body.style.setProperty(`--line-color`,this.value);"><br>
+        <label for="focus-color-picker">Focus color: </label>
+        <input id="focus-color-picker" type="color" value="#ff007d"
+            onchange="body.style.setProperty(`--focus-color`,this.value);"><br>
+        <br>
+        <label for="node-size">Zoom level: </label>
+        <input id="node-size" type="range" min="1" max="12" step="1" value="4"
+            onchange="body.style.setProperty(`--node-size`,this.value + 'vw');"><br>
+    </div>
+    <div id="particles-js"></div>
+
+    <script src="particles.js"></script>
+</body>
+
+</html>
